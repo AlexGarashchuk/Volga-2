@@ -1,0 +1,96 @@
+.s-sign_list{
+    display: flex;
+    flex-wrap: wrap;
+    color: #232323;
+}
+
+.s-sign_list__mark, .s-sign_list__num{
+    
+    box-sizing: border-box;
+    padding-top: 20px;
+   
+    
+    @media(min-width: 960px){
+         padding-bottom: 44px;
+         width: calc(100% / 2 - 15px);
+         min-width: 320px;
+    }
+}
+
+.s-sign_list__header{
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.s-sign_list__mark{
+    
+    li{
+        box-sizing: border-box;
+        padding: 0 30px;
+        position: relative;
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 13px;
+        
+        @media(min-width: 960px){
+            padding: 0 20px;
+        }
+        
+        &::before{
+            content: "";
+            position: absolute;
+            left: 10px;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: #a2d9f7;
+            transform: rotate(45deg);
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            
+               @media(min-width: 960px){
+               left: 0px;
+        }
+        }
+    }
+}
+
+.s-sign_list__num{
+    
+    li{
+        box-sizing: border-box;
+        padding: 0 30px;
+        position: relative;
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 13px;
+        counter-increment: my-awesome-counter;
+        
+        @media(min-width: 960px){
+            padding: 0 20px;
+        }
+        
+        &::before{
+            content: counter(my-awesome-counter);
+            background: #a2d9f7;;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            line-height: 20px;
+            color: #232323;
+            text-align: center;
+            
+            @media(min-width: 960px){
+               left: -6px;
+        }
+     }
+    }
+}
